@@ -3,8 +3,8 @@ import HelloWorld from "./components/HelloWorld";
 import SayMyName from "./components/SayMyName";
 import Pessoa from "./components/Pessoa";
 import List from "./components/List";
-import Eventos from "./components/Eventos";
-import Form from "./components/Form";
+import Eventos from "./components/event/Eventos";
+import Form from "./components/event/Form";
 
 function App() {
   const name = "Pedro";
