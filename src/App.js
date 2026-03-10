@@ -1,35 +1,15 @@
 import "./App.css";
-import HelloWorld from "./components/HelloWorld";
-import SayMyName from "./components/SayMyName";
-import Pessoa from "./components/Pessoa";
-import List from "./components/List";
-import Eventos from "./components/event/Eventos";
-import Form from "./components/event/Form";
-import Condicional from "./components/Condicional";
-import OutraLista from "./components/OutraLIsta";
+import { useState } from "react";
+import SeuNome from "./components/stateLift/SeuNome";
+import Saudacao from "./components/stateLift/Saudacao";
 
 function App() {
-  const name = "Pedro";
-
-  const meusItens = ["React", "Vue", "Angular"];
-
+  const [nome, setNome] = useState();
   return (
     <div className="App">
-      <HelloWorld />
-      <SayMyName name={name} />
-      <Pessoa
-        nome={name}
-        idade="25"
-        profissão="Desenvolvedor"
-        foto="https://via.placeholder.com/150"
-      /> 
-      <List/>
-      <Eventos num={2}/>
-      <Form />
-      <h1>Renderização Condicional</h1>
-      <Condicional/>
-      <OutraLista itens={meusItens} />
-      <OutraLista itens={[]} />
+      <h1>State lift</h1>
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome} />
     </div>
   );
 }
